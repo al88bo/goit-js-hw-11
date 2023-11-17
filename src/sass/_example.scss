@@ -56,6 +56,11 @@
   max-width: 100%;
   object-fit: cover;
   height: 250px;
+  transition: transform 0.2s;
+}
+.gallery-link-image:hover {
+  cursor: zoom-in;
+  transform: scale(1.015);
 }
 .info {
   display: flex;
