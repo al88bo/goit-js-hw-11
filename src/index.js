@@ -83,7 +83,7 @@ async function getLoadMoreImages() {
     renderImages(resp);
     scrollPage();
     swichLoadMoreBtn(resp);
-    if (loadMoreBtn.style.display === 'none') alertNotify.log('info');
+    // if (loadMoreBtn.style.display === 'none') alertNotify.log('info');
   } catch (error) {
     alertNotify.log('failure');
   }
@@ -95,6 +95,7 @@ function swichLoadMoreBtn({ data: { totalHits } }) {
     totalHits <= axiosOptions.params.per_page
       ? 'none'
       : 'block';
+  if (loadMoreBtn.style.display === 'none') alertNotify.log('info');
 }
 
 function renderImages(axiosResp) {
